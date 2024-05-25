@@ -147,8 +147,6 @@ C:\...\opengl-triangle> .\build\opengl_triangle.exe
 Hello, world!
 ```
 
-todo: incorporate with vscode, notes of opengl version, etc.
-
 Now you can start programming! Dont forget to configure CMake when a new
 file is added to your project. It's safe to code entirely outside of a
 code editor; however, it is often easier to use one :)
@@ -156,10 +154,14 @@ code editor; however, it is often easier to use one :)
 ## Using CMake/GNU with Visual Studio Code
 The **C/C++ Extension Pack** for Visual Studio Code includes convenient support for CMake and various C and C++ compilers. You can install the
 extensions it features by searching for it in the extensions tab:
+
+
 ![Search "C/C++ Extension Pack in the Extensions: Marketplace section, and select the extension that matches the name."](.assets/extension_preview.png)
 
 When all of the extensions are installed, restart Visual Studio Code (if not already prompted to do so). Then, whenever you open a CMake project, open
 the command palette by typing `CTRL+Shift+P`, and entering "cmake" and selecting `CMake: Configure`:
+
+
 ![Preview of CMake command action.](.assets/image.png)
 
 > If/when prompted, select the GCC toolchain in the list of tools to use
@@ -169,6 +171,8 @@ the command palette by typing `CTRL+Shift+P`, and entering "cmake" and selecting
 At the bottom-left corner of your Visual Studio Code UI should be a few
 buttons, including a Build command, a little debug icon (it looks like a
 little beetle), and the build-and-run button (the play button):
+
+
 ![Preview of CMake command widgets.](.assets/image-1.png)
 
 Whenever you want to build and run your program, press the build-and-run
@@ -180,13 +184,57 @@ is very useful when your software relies on post-build configurations but you
 don't want to execute anything, or when you're building a library instead of
 an application :).
 
-## Next Steps
-Now you can begin learning OpenGL in (probably) your first C++ project! Feel
-free to open an issue if any of these steps are confusing or don't work on
-some systems. Contributions are welcome.
-
 In the next section, we will make a couple remarks regarding LearnOpenGL that
 are specific to this project template.
 
 # LearnOpenGL
-Nothing yet.
+As mentioned, you will learn how to render a simple triangle using OpenGL from
+https://learnopengl.com/. Read the `Introduction` section, and the 
+`Getting Started` section up to `Hello Triangle`. You're on your own after
+this section, so do your best :).
+
+Lastly, you may skip `Creating a Window`, as it is concerned with configuring
+a project in another development environment. Feel free to read it if you want
+to understand the significance of the libraries used in this project!
+
+Relevant readings:
+* https://learnopengl.com/Getting-started/OpenGL (optional)
+* https://learnopengl.com/Getting-started/Hello-Window
+* https://learnopengl.com/Getting-started/Hello-Triangle
+
+## Remarks
+In `Hello Window`, the following snippet is provided:
+
+
+![GL version 3.3 via GLFW.](.assets/image-2.png)
+
+As described in the article, the context version hints specify what versiobn
+of OpenGL should be loaded by GLFW. For this project, specify OpenGL version
+`4.6`:
+
+```cpp
+int main() {
+    glfwInit();
+    glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 4);
+    glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 6);
+    // ...
+}
+```
+
+Lastly, in `Hello Triangle`, the provided shader programs begin with a
+`#version 330 core` directive. Edit both of these to specify 
+`#version 460 core` instead.
+
+
+![GLSL shader source code as shown in LearnOpenGL.](.assets/image-3.png)
+
+# Next Steps
+Now you can begin learning OpenGL in (probably) your first C++ project! Feel
+free to open an issue if any of these steps are confusing or don't work on
+some systems. Contributions are welcome.
+
+# Contributions
+Feel free to open an issue if anything is wrong with this walkthrough.
+Edits are welcome. I admit that the CMakeLists and dependency management
+is not as robust as it can be, but I did not want to spend long on the project
+template as I made this project on a bit of a whim.
