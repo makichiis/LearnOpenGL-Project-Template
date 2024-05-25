@@ -201,6 +201,9 @@ file is added to your project. It's safe to code entirely outside of a
 code editor; however, it is often easier to use one :)
 
 ## Using CMake/GNU with Visual Studio Code
+**NOTE: Delete the `build/` directory before proceeding to avoid building
+issues in Visual Studio Code.**
+
 The **C/C++ Extension Pack** for Visual Studio Code includes convenient support for CMake and various C and C++ compilers. You can install the
 extensions it features by searching for it in the extensions tab:
 
@@ -213,9 +216,12 @@ the command palette by typing `CTRL+Shift+P`, and entering "cmake" and selecting
 
 ![Preview of CMake command action.](.assets/image.png)
 
-> If/when prompted, select the GCC toolchain in the list of tools to use
-> in this CMake project. In the future, select whatever toolchain you know
-> you should use for a project.
+If/when prompted, select the GCC toolchain in the list of tools to use
+in this CMake project. In the future, select whatever toolchain you know
+you should use for a project.
+
+
+![Alt text](.assets/kits.png)
 
 At the bottom-left corner of your Visual Studio Code UI should be a few
 buttons, including a Build command, a little debug icon (it looks like a

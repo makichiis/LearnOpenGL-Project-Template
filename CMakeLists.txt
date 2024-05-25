@@ -1,6 +1,7 @@
 cmake_minimum_required(VERSION 3.20)
 project("opengl_triangle")
 
+# note to self: https://stackoverflow.com/questions/18968979/how-to-make-colorized-message-with-cmake
 add_subdirectory("deps/")
 
 set(CMAKE_VERBOSE_MAKEFILE OFF) # set to ON to see what cmake is calling, if you really want to know.
