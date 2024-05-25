@@ -38,6 +38,7 @@ on my own, especially if said people want to truly understand the toolchains
 they will rely on in the long-term.
 
 # Requirements
+* Git (optional)
 * GCC (I recommend downloading the w64devkit from GitHub)
 * CMake
 * Visual Studio Code (recommended) (NOT Visual Studio, we're not using that.)
@@ -45,6 +46,34 @@ they will rely on in the long-term.
 # Getting Started
 If you're reading this on GitHub, clone this repo. If you're reading this
 in an editor, good :).
+
+## Download Project Template
+If you know how to use GitHub to manage git repositories, you won't need this
+section :)
+
+### Using Git
+If you'd like to manage this project template using Git,
+make sure you have the Git toolchain installed on your machine.
+The various download binaries can be downloaded from https://git-scm.com/downloads.
+
+When Git is installed, open a new command terminal. Navigate to a folder
+of your choice, and run the following:
+```cmd
+C:\...\> git clone https://github.com/zaruhev/LearnOpenGL-Project-Template.git
+```
+> If my username is no longer zaruhev, then replace zaruhev with my current
+> username :p
+
+You're done! Now you can proceed to the next section.
+
+If you want to wipe and reset the project template:
+```cmd
+C:\...\opengl-triangle> git fetch
+C:\...\opengl-triangle> git reset --hard origin/main
+```
+
+### NOT Using Git
+![Alt text](.assets/shrimple.png)
 
 ## Set up GCC
 **NOTE: If you already have GCC, feel free to skip this section :)**
