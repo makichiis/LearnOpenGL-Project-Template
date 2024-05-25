@@ -17,6 +17,26 @@ of all the building information for such a project. However, because specific
 versions of the dependencies are used in this lab, some of the things done
 in this exercise will differ from LearnOpenGL. They will be documented here.
 
+# Rationale
+When I first got into C++ and OpenGL programming, I struggled a lot with
+understanding the various build systems often used in the development space.
+I spent a long time trying to grasp how any of the build tools work,
+especially because I'm not the type of person to be comfortable with using
+things I don't have the slightest clue about (this is why I specifically
+avoided Visual Studio for the longest time, and find little use for it
+outside of it's robust debugging system, anyway). 
+
+I found myself spending
+more time trying to work with tools I hardly understood rather than actually
+learning things, and it doesn't help that CMake was very difficult to learn
+from guides alone, without already having experience using it, or a tool like
+it.
+
+I want this project to serve as a stepping stone for people in the same
+position that I was when I first started learning C++ and computer graphics
+on my own, especially if said people want to truly understand the toolchains
+they will rely on in the long-term.
+
 # Requirements
 * GCC (I recommend downloading the w64devkit from GitHub)
 * CMake
