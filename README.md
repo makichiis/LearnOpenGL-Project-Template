@@ -263,7 +263,7 @@ In `Hello Window`, the following snippet is provided:
 
 ![GL version 3.3 via GLFW.](.assets/image-2.png)
 
-As described in the article, the context version hints specify what versiobn
+As described in the article, the context version hints specify what version
 of OpenGL should be loaded by GLFW. For this project, specify OpenGL version
 `4.6`:
 
