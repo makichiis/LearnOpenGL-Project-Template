@@ -68,8 +68,8 @@ You're done! Now you can proceed to the next section.
 
 If you want to wipe and reset the project template:
 ```cmd
-C:\...\opengl-triangle> git fetch
-C:\...\opengl-triangle> git reset --hard origin/main
+C:\...\LearnOpenGL-Project-Template> git fetch
+C:\...\LearnOpenGL-Project-Template> git reset --hard origin/main
 ```
 
 ### NOT Using Git
@@ -113,7 +113,7 @@ refreshed by restarting VSCode.
 As you may already know:
 In order to build most software, a bunch of compiler and builder commands
 must be invoked to convert human-readable code into machine instructions.
-This is typically bootstraped with *build tools* or *build scripts* that
+This is typically bootstrapped with *build tools* or *build scripts* that
 streamline the process of building applications. In this exercise (and
 likely many projects down the line), you will use CMake.
 
@@ -136,7 +136,7 @@ Visual Studio Code, you will learn how to call CMake from the *command line*.
 ### Using CMake from the command line
 Usually, we may invoke CMake simply by entering:
 ```cmd
-C:\...\opengl-triangle> cmake .
+C:\...\LearnOpenGL-Project-Template> cmake .
 ```
 
 However, relying entirely on cmake's build scaffolding may result in
@@ -161,10 +161,10 @@ To accomplish this, we must specify what *generator* CMake will use to
 scaffold our project build. To do this, we may call `cmake` and pass the
 `-G` argument as such:
 ```cmd
-C:\...\opengl-triangle> cmake . -B build -G "Unix Makefiles"
+C:\...\LearnOpenGL-Project-Template> cmake . -B build -G "Unix Makefiles"
 -- The C compiler identification is GNU XX.X.X
 ...
--- Build files have been written to: C:/.../opengl-triangle/build
+-- Build files have been written to: C:/.../LearnOpenGL-Project-Template/build
 ```
 > We specify the build directory (with `-B`) as `build/` so we dont
 > plague the source directory with build scaffolding. You'll see why
@@ -180,7 +180,7 @@ shortly), but for now we will call these commands manually.
 Now that our project is configured by CMake, we can build this project
 by calling `cmake` on the `build/` directory:
 ```cmd
-C:\...\opengl-triangle> cmake --build build -j 12
+C:\...\LearnOpenGL-Project-Template> cmake --build build -j 12
 ```
 > We specify `-j 12` in order to tell GNU Make to build with up to 12
 > threads. This can be set to however many cores your processor supports.
@@ -192,7 +192,7 @@ C:\...\opengl-triangle> cmake --build build -j 12
 If CMake was successful, you may now call the built program by entering the
 following in the terminal:
 ```cmd
-C:\...\opengl-triangle> .\build\opengl_triangle.exe
+C:\...\LearnOpenGL-Project-Template> .\build\opengl_triangle.exe
 Hello, world!
 ```
 
