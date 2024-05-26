@@ -136,7 +136,7 @@ Visual Studio Code, you will learn how to call CMake from the *command line*.
 ### Using CMake from the command line
 Usually, we may invoke CMake simply by entering:
 ```cmd
-C:\...\LearnOpenGL-Project-Template> cmake .
+C:\...\LearnOpenGL-Project-Template> cmake . -B build/
 ```
 
 However, relying entirely on cmake's build scaffolding may result in
