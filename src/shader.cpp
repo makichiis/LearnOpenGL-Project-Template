@@ -16,7 +16,7 @@ static void dumpShaderCompileStatus(GLuint shader_id) {
 static void dumpShaderProgramLinkStatus(GLuint program_id) {
     int  success;
     char infoLog[512];
-    glGetProgramiv(program_id, GL_COMPILE_STATUS, &success);
+    glGetProgramiv(program_id, GL_LINK_STATUS, &success);
 
     if (!success) {
         glGetProgramInfoLog(program_id, 512, NULL, infoLog);
